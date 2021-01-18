@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Room</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        background-color: #eff8ff;
+      }
+      .container {
+        max-width: 500px;
+        margin: 80px auto;
+        color: #111d5e;
+      }
+      .header {
+        text-align: center;
+        padding: 20px;
+        background: #a7c5eb;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+      .main {
+        padding: 30px 40px;
+        background-color: #bedcfa;
+      }
+      .btn {
+        margin-top: 20px;
+        width: 100%;
+      }
+      input {
+        margin-bottom: 10px;
+      }
+      .fa-comment-dots {
+        font-size: 30px;
+        padding-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Chat Room<i class="fas fa-comment-dots"></i></h1>
+      </header>
+      <main class="main">
+        <form action="chat.html">
+          <label for="username">Username</label>
+          <input
+            name="username"
+            type="text"
+            class="form-control"
+            placeholder="Enter Username"
+          />
+
+          <label for="room">Room</label>
+          <select class="form-select" name="room" id="room">
+            <option value="JavaScript">JavaScript</option>
+            <option value="Python">Python</option>
+            <option value="PHP">PHP</option>
+            <option value="C#">C#</option>
+            <option value="Ruby">Ruby</option>
+            <option value="Java">Java</option>
+          </select>
+          <button class="btn btn-dark">Join Room</button>
+        </form>
+      </main>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
